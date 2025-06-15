@@ -1,0 +1,96 @@
+.company-logos-wrapper {
+    background-color:  #f1f8ff;
+    margin-bottom: 10px;
+}
+
+.company-container{
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.company-logos-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.company-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.company-logos img {
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.company-logos img:hover {
+    transform: scale(1.05); 
+}
+
+@media (max-width: 768px) {
+    .company-logos {
+        animation: marquee 6s linear infinite;  /* Marquee animation */
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    /* Marquee animation */
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);  /* Adjusted to scroll smoothly */
+        }
+    }
+
+    .company-logos img {
+        margin-right: 50px;  /* Add space between the logos */
+        max-height: 40px;    /* Reduce the size of the logos on mobile */
+    }
+
+    .company-logos::after {
+        content: "";
+        width: 100%;  /* Make it span the same width as the container */
+    }
+}
+
+@media (max-width: 640px) {
+    .company-logos {
+        animation: marquee 6s linear infinite;  /* Marquee animation */
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+        overflow: hidden;  /* Ensure smooth scrolling */
+    }
+
+    /* Marquee animation */
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);  /* Adjusted to scroll smoothly */
+        }
+    }
+
+    .company-logos img {
+        margin-right: 20px;  /* Less space between logos on smaller screens */
+        max-height: 30px;    /* Further reduce the size of logos on mobile */
+    }
+
+    .company-logos::after {
+        content: "";
+        width: 100%;  /* Ensure the container takes up the full width */
+    }
+}

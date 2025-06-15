@@ -1,0 +1,234 @@
+/* Global Layout */
+.post-job-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Form Container */
+.post-form-section {
+  flex: 2;
+  max-width: 700px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e6f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.post-form-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: #2b56ff;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Preview Sidebar */
+.post-preview-section {
+  flex: 1;
+  max-width: 350px;
+  background-color: #f9fbff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #dde6f3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.post-preview-section.hidden {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Input Fields */
+.post-input,
+.post-textarea,
+.post-select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-input:focus,
+.post-textarea:focus,
+.post-select:focus {
+  border-color: #4677f5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(70, 119, 245, 0.2);
+}
+
+/* Labels */
+.post-label {
+  font-weight: bold;
+  color: #1a1a1a;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Headings */
+.post-h2 {
+  color: #2b56ff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.post-h3 {
+  margin-bottom: 15px;
+  color: #2b56ff;
+  font-size: 20px;
+}
+
+/* Buttons */
+.post-button {
+  padding: 12px 24px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #2b56ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.post-button:hover {
+  background-color: #2345d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 86, 255, 0.2);
+}
+
+.post-preview-btn {
+  background-color: #28a745;
+}
+
+.post-preview-btn:hover {
+  background-color: #218838;
+}
+
+/* Image Preview */
+.post-preview-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+}
+
+/* Preview Text */
+.post-preview-section p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.post-preview-section p strong {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .post-job-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .post-form-section,
+  .post-preview-section {
+    max-width: 100%;
+  }
+
+  .post-preview-section.hidden {
+    display: none;
+  }
+
+  /* Adjust form input padding and font size on mobile */
+  .post-input,
+  .post-textarea,
+  .post-select {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .post-button {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+/* City-State Row */
+.post-city-state-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.post-city-state-row .post-form-group {
+  flex: 1;
+}
+
+.post-button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.post-left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.post-right-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post-next-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.post-next-btn:hover {
+  background-color: #0056b3;
+}
+
+.post-preview-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.post-preview-btn:hover {
+  background-color: #5a6268;
+}

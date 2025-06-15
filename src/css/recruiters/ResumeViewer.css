@@ -1,0 +1,57 @@
+.resume-viewer-container {
+  background-color: #e6e8eb;
+  border: 1px solid #2b2f38;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.1);
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.resume-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #80bfff;
+  text-align: center;
+}
+
+.resume-document {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #d7dae1;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.resume-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resume-controls button {
+  background: #d0d4db;
+  color: #a0cfff;
+  border: 1px solid #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.resume-controls button:hover {
+  background: #dcdee1;
+}
+
+.resume-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #aaa;
+  font-size: 0.9rem;
+}

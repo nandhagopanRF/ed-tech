@@ -1,0 +1,116 @@
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  background-color: #ffffff;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 90%;
+  background-color: #ffffff; 
+  border-radius: 24px;   
+  padding: 8px 35px;     
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+}
+  
+.nav-left-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+  
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap:30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+  
+.user-icon,
+.nav-logo {
+  width: 35px;
+  height: 35px;
+}
+  
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  font-size: 1.05rem;
+}
+.nav-links li a:hover {
+  color: #007bff;
+}
+  
+/* hide the actual checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* the “hamburger” button */
+/* anchor menu to container */
+.nav-container {
+  position: relative;
+}
+
+/* always hide hamburger on desktop */
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  /* hide by default */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;        /* center the items horizontally */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 100;
+  }
+
+  /* show when open */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: auto;                /* let them auto-size */
+  }
+
+  .nav-links li a {
+    display: block;
+    width: auto;
+    padding: 0.5rem 1rem;
+    text-align: center;         /* center the text */
+  }
+
+  /* tighten container padding so dropdown lines up */
+  .nav-container {
+    padding: 8px 16px;
+  }
+}

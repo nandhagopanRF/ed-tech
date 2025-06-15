@@ -1,0 +1,66 @@
+.interview-stage {
+  background: #f9f9fb;
+  border: 1px solid #dcdce4;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  color: #333;
+}
+
+.interview-stage h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #222;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+
+.interview-stage label {
+  display: block;
+  margin-top: 16px;
+  font-weight: 500;
+  color: #444;
+}
+
+.interview-stage input,
+.interview-stage textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  transition: border 0.3s, background 0.3s;
+}
+
+.interview-stage input:focus,
+.interview-stage textarea:focus {
+  border-color: #007bff;
+  background-color: #f5faff;
+}
+
+.interview-stage button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.interview-stage button:hover {
+  background-color: #005fcc;
+}
+
+.interview-stage.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}

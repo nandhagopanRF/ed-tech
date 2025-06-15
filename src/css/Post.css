@@ -1,0 +1,107 @@
+.post-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post-header {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.caption {
+  font-size: 15px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.post-actions {
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.like-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.delete-comment {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.delete-comment:hover {
+  color: #e74c3c;
+}
+
+.comments-section input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: white;
+  background-color: #070707;
+  outline: none;
+  width: 100%;
+}
+
+.comments-section button {
+  align-self: flex-end;
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: rgb(248, 246, 246);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.comments-section button:hover {
+  background-color: #0056b3;
+}
+.delete-icon {
+  float: right;
+  cursor: pointer;
+  color: #888;
+  margin-left: 10px;
+  transition: color 0.2s ease;
+}
+
+.delete-icon:hover {
+  color: red;
+}

@@ -1,0 +1,135 @@
+/* MessagesSidebar.css */
+.messages-sidebar {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.user-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-item .tooltip {
+  position: absolute;
+  bottom: 100%; /* position it above */
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  margin-bottom: 8px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.user-item:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.tooltip-card {
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #444;
+  margin-bottom: 8px;
+  background-image: url('https://via.placeholder.com/48'); /* Replace with dynamic if needed */
+  background-size: cover;
+  background-position: center;
+}
+
+.tooltip-info {
+  text-align: center;
+}
+
+.tooltip-info .role {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.tooltip-info .company {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Existing styles... */
+
+.messages-container {
+  transition: transform 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger only on mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .hamburger {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex; /* ✅ This is the key to override default `display: none` */
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+  }
+}
+
+/* Sidebar styles on mobile */
+@media (max-width: 768px) {
+  .messages-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    background: white;
+    z-index: 999;
+    transform: translateX(100%);
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .messages-container.show {
+    transform: translateX(0);
+  }
+
+  .close-icon {
+    font-size: 24px;
+    text-align: right;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .side-placeholder,
+  .messages-container:not(.show) {
+    display: none;
+  }
+}
